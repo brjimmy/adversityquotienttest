@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AQ Test</title>
+
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./script/takeTest.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+    <!-- Header Section with Logo -->
+    <header>
+        <img src="img/BR_Logo_Dark.png" alt="Logo" class="logo">
+    </header>
+
+    <!-- Black Background for Initial Section -->
+    <div class="black-background">
+        <!-- Main Content Section -->
+        <main class="content-container">
+            <!-- Image Section -->
+            <div class="image-wrapper">
+                <img src="img/AQ_background_image.png" alt="AQ Test Banner" class="aq-banner">
+            </div>
+
+            <h1 class="text-4xl font-light mb-5">Adversity Quotient (AQ) Test</h1>
+            <p class="text-lg mb-10">Take this test to find out your AQ score!</p>
+
+            <!-- Take AQ Test Button -->
+            <button id="testBtn" class="mb-10">
+                Take AQ Test
+            </button>
+        </main>
+    </div>
+
+    <!-- Form Section -->
+    <section id="formSection"></section>
+
+    <!-- Result Section -->
+    <section id="resultSection" class="mt-10"></section>
+
+</body>
+</html>

@@ -1,0 +1,237 @@
+body {
+    margin: 0;
+}
+
+/* Black background for the initial section */
+.black-background {
+    background-color: black; /* Black background */
+    color: white; /* Text color */
+    min-height: calc(100vh - 50px); /* Full height minus a small margin */
+    padding-bottom: 20px; /* Add padding to extend the background */
+}
+
+/* Content Container */
+.content-container {
+    position: relative; /* Position context */
+    z-index: 1; /* Ensures it stays above the background */
+    padding-top: 70px; /* Adjust this value based on the header's height */
+}
+
+/* Styling for Image */
+.image-wrapper {
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically if needed */
+    padding: 10px;
+}
+
+.aq-banner {
+    max-width: 80%; /* Responsive image width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional rounding of image corners */
+}
+
+/* Button Styles */
+#testBtn {
+    display: block; /* Ensures block-level alignment */
+    width: 300px; /* Fixed width of 300px */
+    margin: 20px auto; /* Center-aligns the button */
+    background-color: #FF4713; /* Button color */
+    color: white;
+    font-weight: bold;
+    padding: 10px 0; /* Adjust padding as needed */
+    border: none;
+    border-radius: 50px; /* Oval shape */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover Effect for the Button */
+#testBtn:hover {
+    background-color: #8D9094; /* Darker shade on hover */
+}
+
+/* Shared Button Styles for Submit Button */
+.button-style {
+    display: block; /* Ensures block-level alignment */
+    width: 300px; /* Fixed width of 300px */
+    margin: 20px auto; /* Center-aligns the button */
+    background-color: #FF4713; /* Button color */
+    color: white;
+    font-weight: bold;
+    padding: 10px 0; /* Adjust padding as needed */
+    border: none;
+    border-radius: 50px; /* Oval shape */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover Effect for the Buttons */
+.button-style:hover {
+    background-color: #8D9094; /* Darker shade on hover */
+}
+
+/* Styling Each Question Wrapper */
+.question-wrapper {
+    background-color: #BBBBBB; /* Question background */
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Question Text */
+.question-wrapper p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px; /* Adjusted for better spacing */
+}
+
+/* Radio Button Group Layout */
+.radio-group {
+    display: flex;
+    align-items: center; /* Aligns items vertically center */
+    justify-content: space-between; /* Distributes space evenly between items */
+    margin-top: 5px; /* Space above the radio group */
+    width: 100%; /* Ensures it takes full width */
+}
+
+/* Radio Group Label */
+.radio-group label {
+    flex: 1; /* Each label takes equal space */
+    text-align: center; /* Center-align text */
+}
+
+.radio-group input[type="radio"] {
+	transform: scale(1.75); /* Increase the size of the radio button */
+    margin: 0 20px; /* Space around radio buttons */
+}
+
+
+
+/* Change the checked color of the radio buttons */
+.radio-group input[type="radio"]:checked {
+    accent-color: #FF4713; /* Change to your desired color */
+}
+
+/* Header and Paragraph Centering */
+h1, h2, p {
+    text-align: center;
+}
+
+/* Form and Result Section Styling */
+#formSection {
+    display: none;
+    max-width: 800px;
+    margin: 30px auto;
+    background-color: #4A4F54; /* Gray background */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin-top: 20px; /* Adjust as needed to control spacing */
+}
+
+#resultSection {
+    display: none;
+    max-width: 800px;
+    margin: 30px auto;
+    background-color: #4A4F54; /* Result section color */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin-top: 20px; /* Adjust as needed to control spacing */
+    color: white; /* Ensure all text in the result section is white */
+}
+
+/* Center-aligns the result section heading */
+#resultSection h3 {
+    text-align: center; /* Center-aligns the text */
+}
+
+/* Result Score Circle */
+.result-score {
+    font-size: 60px;
+    width: 150px;
+    height: 150px;
+    background-color: #FF4713;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Result Container Layout */
+.result-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+/* Core Breakdown Section */
+.core-breakdown span {
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Explanation Section */
+#explanation {
+    margin-top: 40px;
+    padding: 25px;
+    background-color: #1A2125;
+    border-radius: 10px;
+    color: #e0e0e0;
+    line-height: 1.8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left; /* Align all text to the left */
+}
+
+/* Styling Headings inside Explanation */
+#explanation h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #ffffff;
+}
+
+/* Styling Paragraphs inside Explanation */
+#explanation p {
+    margin: 5px 0 15px; /* Spacing between paragraphs */
+    font-size: 12px;
+    line-height: 1.6;
+    text-align: left; /* Ensure paragraphs are aligned to the left */
+}
+
+/* Ensure consistent margin between sections */
+.main-content {
+    margin-bottom: 30px;
+}
+
+#explanation h3 {
+    text-align: left; /* Align headings to the left */
+}
+
+/* Header Styles */
+header {
+    background-color: #BBBBBB; /* Maintain the black background */
+    padding: 20px; /* Adjust padding as needed */
+    position: fixed; /* Fixed position */
+    top: 0; /* Stick to the top */
+    right: 0; /* Stick to the right */
+    width: 100%; /* Ensure the header spans the full width */
+    z-index: 10; /* Ensure it appears above other content */
+    display: flex; /* Use flexbox for alignment */
+    justify-content: flex-end; /* Align items to the right */
+}
+
+.logo {
+    height: 35px; /* Set the height of the logo */
+    margin-right: 20px; /* Space from the right edge */
+    margin-top: 10px; /* Space from the top edge */
+}
