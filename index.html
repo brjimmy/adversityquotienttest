@@ -13,25 +13,21 @@
 
     <!-- Header Section with Logo -->
     <header>
-        <img src="img/BR_Logo_Dark.png" alt="Logo" class="logo">
+        <img src="./img/BR_Logo_Dark.png" alt="Logo" class="logo">
     </header>
 
     <!-- Black Background for Initial Section -->
     <div class="black-background">
-        <!-- Main Content Section -->
         <main class="content-container">
-            <!-- Image Section -->
             <div class="image-wrapper">
-                <img src="img/AQ_background_image.png" alt="AQ Test Banner" class="aq-banner">
+                <img src="./img/AQ_background_image.png" alt="AQ Test Banner" class="aq-banner">
             </div>
 
             <h1 class="text-4xl font-light mb-5">Adversity Quotient (AQ) Test</h1>
             <p class="text-lg mb-10">Take this test to find out your AQ score!</p>
 
             <!-- Take AQ Test Button -->
-            <button id="testBtn" class="mb-10">
-                Take AQ Test
-            </button>
+            <button id="testBtn" class="mb-10">Take AQ Test</button>
         </main>
     </div>
 
@@ -39,7 +35,38 @@
     <section id="formSection"></section>
 
     <!-- Result Section -->
-    <section id="resultSection" class="mt-10"></section>
+    <section id="resultSection" class="mt-10">
+        <span style="text-align: center">
+        <!-- Original result display with the circular score -->
+        </span>
+        <div class="result-score">
+        </div>
+
+        <span style="text-align: center">
+        <!-- Original content for CORE breakdown and explanation -->
+        </span>
+        <div id="originalResultContent">
+            <p style="font-size: 13px; margin-bottom: 30px;">
+              At every question, the first radio button equates to a score of one, while the fifth equates to five. Add all the scores from all the questions, then multiply it by two. The result is your ARP, or Adversity Response Profile.
+          </p>
+            <h2 class="text-2xl mb-5">You have an Adversity Response Profile score .</h2>
+            <p class="mb-5">Average score: 147.5</p>
+            <div class="result-container">
+                <div>Control: </div>
+                <div>Ownership: </div>
+                <div>Reach: </div>
+                <div>Endurance: </div>
+            </div>
+        </div>
+
+        <span style="text-align: center">
+        <!-- Mountain Image Score Display with a dot -->
+        </span>
+        <div class="mountain-score-container">
+            <img src="./img/mountain.png" alt="Mountain background" class="mountain-image">
+            <div id="scoreIndicator" class="score-indicator-dot"></div>
+        </div>
+    </section>
 
 </body>
 </html>
