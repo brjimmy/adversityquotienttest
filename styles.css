@@ -186,7 +186,11 @@ header {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 20px;
+    text-align: left;
+    text-indent: -20px; /* Adjust this value based on your layout */
+    padding-left: 20px; /* Same as the negative indent value */
 }
+
 
 /* Radio Button Group Layout */
 .radio-group {
