@@ -1,8 +1,8 @@
-/* Base styles */
 body {
     margin: 0;
 }
 
+/* Black background for the initial section */
 .black-background {
     background-color: black;
     color: white;
@@ -10,12 +10,14 @@ body {
     padding-bottom: 20px;
 }
 
+/* Content Container */
 .content-container {
     position: relative;
     z-index: 1;
     padding-top: 70px;
 }
 
+/* Styling for Image */
 .image-wrapper {
     display: flex;
     justify-content: center;
@@ -23,19 +25,22 @@ body {
 }
 
 .aq-banner {
-    max-width: 100%;
+    max-width: 80%;
     height: auto;
     border-radius: 8px;
 }
 
-/* Core Score Title Styling */
+
 .core-score-title {
     text-align: center !important;
-    font-weight: bold;
+    font-weight: bold;   /* Customize further as needed */
     margin-top: 20px;
     margin-bottom: 10px;
 }
 
+
+
+/* Button Styles */
 #testBtn {
     display: block;
     width: 300px;
@@ -54,7 +59,8 @@ body {
     background-color: #8D9094;
 }
 
-#formSection, #resultSection {
+/* Form and Result Section Styling */
+#formSection {
     display: none;
     max-width: 800px;
     margin: 30px auto;
@@ -62,6 +68,18 @@ body {
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+}
+
+#resultSection {
+    display: none;
+    max-width: 800px;
+    margin: 30px auto;
+    background-color: #4A4F54;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
     color: white;
 }
 
@@ -72,6 +90,12 @@ body {
     font-size: 18px;
 }
 
+/* Center-aligns the result section heading */
+#resultSection h3 {
+    text-align: left;
+}
+
+/* Original Score Circle in the main result section */
 .result-score {
     font-size: 60px;
     width: 150px;
@@ -86,6 +110,14 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
+/* Core Breakdown Section */
+.core-breakdown span {
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Explanation Section */
 #explanation {
     margin-top: 40px;
     padding: 25px;
@@ -94,13 +126,39 @@ body {
     color: #e0e0e0;
     line-height: 1.8;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left;
 }
 
+#explanation h3 {
+    margin-left: 0;  /* Ensures headings are aligned to the left */
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+#explanation p {
+    margin: 5px 0 15px;
+    font-size: 12px;
+    line-height: 1.6;
+    text-align: left;
+}
+
+h1, h2, p {
+    text-align: center;
+}
+
+.main-content {
+    margin-bottom: 30px;
+}
+
+/* Header Styles */
 header {
     background-color: #BBBBBB;
     padding: 20px;
     position: fixed;
     top: 0;
+    right: 0;
     width: 100%;
     z-index: 10;
     display: flex;
@@ -110,13 +168,18 @@ header {
 .logo {
     height: 35px;
     margin-right: 20px;
+    margin-top: 0px;
 }
 
+/* Styling Each Question Wrapper */
 .question-wrapper {
     background-color: #BBBBBB;
     padding: 15px;
     margin-bottom: 20px;
     border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .question-wrapper p {
@@ -124,9 +187,10 @@ header {
     font-weight: bold;
     margin-bottom: 20px;
     text-align: left;
-    text-indent: -20px;
-    padding-left: 20px;
+    text-indent: -20px; /* Adjust this value based on your layout */
+    padding-left: 20px; /* Same as the negative indent value */
 }
+
 
 /* Radio Button Group Layout */
 .radio-group {
@@ -134,6 +198,7 @@ header {
     align-items: center;
     justify-content: space-between;
     margin-top: 5px;
+    width: 100%;
 }
 
 .radio-group label {
@@ -153,8 +218,9 @@ header {
 /* Mountain Score Display Container */
 .mountain-score-container {
     position: relative;
-    max-width: 100%;
+    max-width: 800px;
     margin: 20px auto;
+    text-align: center;
 }
 
 .mountain-image {
@@ -163,7 +229,7 @@ header {
     border-radius: 8px;
 }
 
-/* Score Indicator Dot */
+/* Score Indicator Dot on Mountain Map */
 .score-indicator-dot {
     position: absolute;
     width: 20px;
@@ -172,6 +238,7 @@ header {
     border-radius: 50%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
+
 
 .button-style {
     display: block;
@@ -196,42 +263,3 @@ header {
     margin-top: 10px;
 }
 
-/* Minimal Responsive Design for Mobile Screens */
-@media (max-width: 768px) {
-    .content-container, body {
-        padding: 10px;
-    }
-
-    h1 {
-        font-size: 1.5rem;
-    }
-
-    .question-wrapper p {
-        font-size: 1rem;
-    }
-
-    #testBtn, .button-style {
-        width: 100%;
-        font-size: 1rem;
-        padding: 10px;
-    }
-
-    #formSection, #resultSection {
-        width: 100%;
-        margin: 0 auto;
-    }
-
-    .radio-group {
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-
-    .score-indicator-dot {
-        width: 15px;
-        height: 15px;
-    }
-
-    .result-score {
-        font-size: 2rem;
-    }
-}
