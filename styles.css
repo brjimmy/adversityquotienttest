@@ -1,3 +1,4 @@
+/* Existing styles */
 body {
     margin: 0;
 }
@@ -10,14 +11,12 @@ body {
     padding-bottom: 20px;
 }
 
-/* Content Container */
 .content-container {
     position: relative;
     z-index: 1;
     padding-top: 70px;
 }
 
-/* Styling for Image */
 .image-wrapper {
     display: flex;
     justify-content: center;
@@ -30,15 +29,13 @@ body {
     border-radius: 8px;
 }
 
-
+/* Core Score Title Styling */
 .core-score-title {
     text-align: center !important;
-    font-weight: bold;   /* Customize further as needed */
+    font-weight: bold;
     margin-top: 20px;
     margin-bottom: 10px;
 }
-
-
 
 /* Button Styles */
 #testBtn {
@@ -59,19 +56,7 @@ body {
     background-color: #8D9094;
 }
 
-/* Form and Result Section Styling */
-#formSection {
-    display: none;
-    max-width: 800px;
-    margin: 30px auto;
-    background-color: #4A4F54;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    margin-top: 20px;
-}
-
-#resultSection {
+#formSection, #resultSection {
     display: none;
     max-width: 800px;
     margin: 30px auto;
@@ -90,12 +75,6 @@ body {
     font-size: 18px;
 }
 
-/* Center-aligns the result section heading */
-#resultSection h3 {
-    text-align: left;
-}
-
-/* Original Score Circle in the main result section */
 .result-score {
     font-size: 60px;
     width: 150px;
@@ -110,14 +89,12 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-/* Core Breakdown Section */
 .core-breakdown span {
     display: block;
     text-align: center;
     margin-bottom: 10px;
 }
 
-/* Explanation Section */
 #explanation {
     margin-top: 40px;
     padding: 25px;
@@ -130,7 +107,7 @@ body {
 }
 
 #explanation h3 {
-    margin-left: 0;  /* Ensures headings are aligned to the left */
+    margin-left: 0;
     font-weight: bold;
     font-size: 18px;
     margin-top: 15px;
@@ -148,11 +125,6 @@ h1, h2, p {
     text-align: center;
 }
 
-.main-content {
-    margin-bottom: 30px;
-}
-
-/* Header Styles */
 header {
     background-color: #BBBBBB;
     padding: 20px;
@@ -187,10 +159,9 @@ header {
     font-weight: bold;
     margin-bottom: 20px;
     text-align: left;
-    text-indent: -20px; /* Adjust this value based on your layout */
-    padding-left: 20px; /* Same as the negative indent value */
+    text-indent: -20px;
+    padding-left: 20px;
 }
-
 
 /* Radio Button Group Layout */
 .radio-group {
@@ -239,7 +210,6 @@ header {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-
 .button-style {
     display: block;
     width: 300px;
@@ -263,3 +233,54 @@ header {
     margin-top: 10px;
 }
 
+/* Responsive Design for Mobile Screens */
+@media (max-width: 768px) {
+    /* Adjust font sizes and container padding */
+    .content-container, body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .question-wrapper p {
+        font-size: 1rem;
+    }
+
+    #testBtn, .button-style {
+        width: 100%;
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    /* Full-width form and result sections */
+    #formSection, #resultSection {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    /* Make images responsive */
+    .logo, .aq-banner, .mountain-image {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Stack radio buttons vertically on smaller screens */
+    .radio-group {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    /* Reduce dot size for mobile */
+    .score-indicator-dot {
+        width: 15px;
+        height: 15px;
+    }
+
+    /* Adjust result score text size for mobile */
+    .result-score {
+        font-size: 2rem;
+    }
+}
