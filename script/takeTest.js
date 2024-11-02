@@ -241,7 +241,6 @@ function getCurvePosition(score) {
     return interpolate(point1, point2, t);
 }
 
-// Function to display results with curve positioning
 const displayResult = (totalScore, breakdown) => {
     const finalScore = totalScore * 2;
 
@@ -283,15 +282,39 @@ const displayResult = (totalScore, breakdown) => {
     </div>
 `;
 
-
-    // Calculate the position on the curve based on the score
-    const curvePosition = getCurvePosition(finalScore);
-
-    // Adjust position for center alignment of the dot (assuming dot diameter is 20px)
-    const dotDiameter = 20;
-    const scoreIndicator = document.getElementById("scoreIndicator");
-    scoreIndicator.style.left = `calc(${(curvePosition.x - dotDiameter / 2) / 1920 * 100}%)`;
-    scoreIndicator.style.bottom = `${((907 - curvePosition.y) - dotDiameter / 2) / 907 * 100}%`;
-
+    // Start the animation for score and dot
+    animateScoreAndDot(finalScore);
     resultSection.style.display = "block";
+};
+
+// Animation function for score and dot
+const animateScoreAndDot = (finalScore) => {
+    let currentScore = 0;
+    const scoreElement = document.querySelector(".result-score");
+    const scoreIndicator = document.getElementById("scoreIndicator");
+    const duration = 2000;  // Total animation duration in milliseconds
+    const incrementTime = 20; // Time interval for each increment
+    const steps = duration / incrementTime;
+    const scoreIncrement = finalScore / steps;
+
+    let currentStep = 0;
+
+    const interval = setInterval(() => {
+        if (currentStep >= steps) {
+            clearInterval(interval);
+            currentScore = finalScore;  // Ensure it reaches the final score
+        } else {
+            currentScore += scoreIncrement;
+            currentStep += 1;
+        }
+
+        // Update score display
+        scoreElement.textContent = Math.floor(currentScore);
+
+        // Update dot position on the curve
+        const curvePosition = getCurvePosition(currentScore);
+        const dotDiameter = 20;
+        scoreIndicator.style.left = `calc(${(curvePosition.x - dotDiameter / 2) / 1920 * 100}%)`;
+        scoreIndicator.style.bottom = `${((907 - curvePosition.y) - dotDiameter / 2) / 907 * 100}%`;
+    }, incrementTime);
 };
